@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="pr-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
-    <title>Document</title>
-</head> 
-<body>
+    <title>Calculadora Consumo</title>
+  </head>
+  <body>
     <form action="">
-    <label for="">Tipo de Combustível</label>
-        <section>
-        <div> <input required type="radio" name="combustivel" class="inputcombustivel" id="etanol" value="etanol">
-            <label for="etanol">Etanol</label></div>
-        <div> <input required type="radio" name="combustivel" class="inputcombustivel" id="gasolina" value="gasolina">
-            <label for="gasolina">Gasolina</label></div>
-    </section>
-    <label for="consumo">Digite o consumo do veículo (KM/L):</label>
-   <input required type="number" id ="consumo"/>
-   <label for="velocidade">Digite a velocidade média (KM/h):</label>
-   <input required type="number" id ="velocidade"/>
-   <label for="duracao">Selecione o tempo total da viagem:</label>
-   <input required type="time" id ="duracao"/>
-   <button>CALCULAR</button>
+      <label for="">Tipo de Combustível</label>
+      <section>
+        <div><input required type="radio" name="combustivel" class="inputCombustivel" id="etanol" value="etanol" /> <label for="etanol">Etanol</label></div>
+        <div>
+          <input required type="radio" name="combustivel" class="inputCombustivel" id="gasolina" value="gasolina" /> <label for="gasolina">Gasolina</label>
+        </div>
+      </section>
+      <label for="consumo">Digite o consumo do veículo (Km/L):</label>
+      <input required type="number" id="consumo" />
+      <label for="velocidade">Digite a velocidade média (Km/h):</label>
+      <input required type="number" id="velocidade" />
+      <label for="duracao">Selecione o tempo total da viagem:</label>
+      <input required type="time" id="duracao" />
+      <button>CALCULAR</button>
     </form>
     <p></p>
-</body>
+  </body>
 </html>
