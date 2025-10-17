@@ -57,6 +57,12 @@ function calcularConsumo() {
   // FÓRMULA PARA CALCULAR A DISTÂNCIA PERCORRIDA PELO USUÁRIO
   viagem.percurso = (viagem.velocidadeMedia * ((hora *60 + minuto)/60)).toFixed(1)
 
+//CONDICAO PARA REDUZIR O VALOR DA DISTANCIA TOTAL CASO O USUARIO UTILIZE
+  if(combustivel.tipo.toLowerCase() ==='etanol'){
+    viagem.percurso = (viagem.percurso - (viagem.percurso * 0,3) *100)
+    console.log(viagem.percurso)
+  }
+
   // MÉTODO (REPLACE) PARA SUBSTITUIR "." POR "," NA EXIBIÇÃO DA DISTÂNCIA TOTAL
   console.log(viagem.percurso.replace('.',',') + ' KM')
 
