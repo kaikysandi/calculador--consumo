@@ -4,6 +4,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 form{
@@ -23,4 +24,7 @@ section{
 
 label:hover{
    cursor: pointer;
+}
+p{
+    color: aliceblue;
 }
