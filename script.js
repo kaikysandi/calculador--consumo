@@ -3,6 +3,7 @@ const input = {
   consumo: document.querySelector("#consumo"),
   velocidade: document.querySelector("#velocidade"),
   duracao: document.querySelector("#duracao"),
+  precoCombustivel: document.querySelector("#precoCombustivel")
 };
 
 const elemento = {
@@ -27,6 +28,7 @@ const combustivel = {
   tipo: "",
   precoEtanol: 3.899,
   precoGasolina: 5.999,
+  preco_combustivel:""
 };
 
 input.combustivel.forEach((radio) => {
@@ -41,7 +43,7 @@ elemento.formulario.addEventListener("submit", (evento) => {
 });
 
 function calcularConsumo() {
-
+console.log(typeof input.precoCombustivel.value)
   //VARIAVEIS PARA CAPTURAR O VALOR DA HORA E MINUTO
   viagem.duracao = input.duracao.value;
   viagem.velocidadeMedia = input.velocidade.value;
@@ -64,7 +66,7 @@ function calcularConsumo() {
   }
 
   // MÉTODO (REPLACE) PARA SUBSTITUIR "." POR "," NA EXIBIÇÃO DA DISTÂNCIA TOTAL
-  console.log(viagem.percurso.replace('.',',') + ' KM')
+  
 
   // CALCULO DO CONSUMO EM LITROS GASTOS NA VIAGEM
   viagem.consumoLitros = viagem.percurso / veiculo.consumoMedio
@@ -72,6 +74,7 @@ function calcularConsumo() {
   console.log(viagem.consumoLitros)
 
 // CALCULO PARA SABER O CUSTO EM REAIS (R$) DE ACORDO COM O CONSUMO EM LITROS
+combustivel.preco_combustivel = +input.precoCombustivel.value
 if(combustivel.tipo.toLowerCase() === 'etanol'){
   viagem.custoEmReais = viagem.consumoLitros * combustivel.precoEtanol
   // MÉTODO PARA FORMATAR O RESULTADO COMO MOEDA (R$)
